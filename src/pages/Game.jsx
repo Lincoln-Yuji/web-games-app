@@ -1,4 +1,4 @@
-import { useParams } from "react-router/client";
+import { useParams } from "react-router-dom";
 
 const Game = () => {
     const { id } = useParams();
