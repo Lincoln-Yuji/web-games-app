@@ -5,8 +5,8 @@ const Home = () => {
     <>
       <h1>Jogos Populares</h1>
       <ul>
-        <li><Link to="game/0">Jogo 1</Link></li>
-        <li><Link to="game/1">Jogo 2</Link></li>
+        <li><Link to="game/0">Cut the Rope</Link></li>
+        <li><Link to="game/1">Cursed Marbles</Link></li>
         <li>Jogo 3</li>
       </ul>
       <h1>Jogos Novos</h1>

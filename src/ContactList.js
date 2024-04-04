@@ -26,6 +26,15 @@ const ContactList = ({contacts, updateContact, updateCallback}) => {
     }
 
     return <div>
+        <h1>
+            CRUD application which communicates with a backend hosted with PythonAnywhere
+        </h1>
+        <p>
+            This simple web app is just here so we can test if the communication between the React Frontend and the Python Backend is working just fine.
+        </p>
+        <p>
+            We can use this to check if our Backend is properly connected to the PythonAnywhere's MySQL database.
+        </p>
         <h2>Registered Users</h2>
         <table>
             <thead>
