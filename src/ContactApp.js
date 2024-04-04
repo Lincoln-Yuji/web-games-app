@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 
 import { BACKEND_URL } from './app_config.js'
 import ContactList from './ContactList.js';
 import ContactForm from './ContactForm.js';
 
-function App() {
+function ContactApp() {
   const [contacts, setContacts] = useState([]); 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentContact, setCurrentContact] = useState({});
@@ -54,4 +53,4 @@ function App() {
   </>
 }
 
-export default App
+export default ContactApp
