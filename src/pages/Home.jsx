@@ -1,19 +1,27 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { BACKEND_URL } from "../app_config";
 
 const Home = () => {
+
+    const [games, setGames] = useState([])
+
+    const fetchGames = async () => {
+      const response = await fetch(BACKEND_URL + "/home_games")
+      const data = await response.json()
+      setGames(data.games)
+    }
+
+    useEffect(() => {
+      fetchGames()
+      console.log("Fetching Games...");
+    }, []);
+
     return (
     <>
-      <h1>Jogos Populares</h1>
+      <h1>Jogos</h1>
       <ul>
-        <li><Link to="game/0">Cut the Rope</Link></li>
-        <li><Link to="game/1">Cursed Marbles</Link></li>
-        <li>Jogo 3</li>
-      </ul>
-      <h1>Jogos Novos</h1>
-      <ul>
-        <li>Jogo 1</li>
-        <li>Jogo 2</li>
-        <li>Jogo 3</li>
+        { games.map((game) => (<li><Link to={`game/${game.id}`}>{game.title}</Link></li>)) }
       </ul>
     </>
     )
