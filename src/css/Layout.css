@@ -36,6 +36,11 @@ nav {
     height: 50%;
 }
 
+#page-content {
+    max-width: 1280px;
+    margin: 0 auto 0 auto;
+}
+
 #side-toggle {
     height: 50%;
     margin: auto auto auto 10px;

@@ -6,3 +6,8 @@
     display: block;
     margin: 0 auto;
 }
+
+.toggle-button {
+    display: block;
+    margin-left: auto;
+}

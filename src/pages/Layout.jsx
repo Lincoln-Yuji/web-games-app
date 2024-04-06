@@ -18,8 +18,10 @@ const Layout = () => {
           </div>
         </div>
       </nav>
-      <Link to="/contact">CRUD Test</Link>
-      <Outlet />
+      <div id="page-content">
+        <Link to="/contact">CRUD Test</Link>
+        <Outlet />
+      </div>
     </>
   )
 };
