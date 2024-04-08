@@ -25,7 +25,7 @@ const SearchGame = () => {
     <>
       <h1>Results for: {query ? query : ""}</h1>
       <ul>
-        { games.map((game) => (<li><Link to={`game/${game.id}`}>{game.title}</Link></li>)) }
+        { games.map((game) => (<li><Link to={`/game/${game.id}`}>{game.title}</Link></li>)) }
       </ul>
     </>
     )
