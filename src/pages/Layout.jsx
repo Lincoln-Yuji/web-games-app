@@ -1,8 +1,18 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 import '../css/Layout.css'
 
 const Layout = () => {
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      const inputBar = e.target;
+      navigate(`/search?q=${inputBar.value}`);
+      inputBar.value = "";
+    }
+  };
+
   return (
     <>
       <nav>
@@ -14,7 +24,7 @@ const Layout = () => {
             <Link to="/" className="nav-page">Home</Link>
           </div>
           <div className="nav-content">
-            <input type="text" placeholder=" Pesquisa"/>
+            <input type="text" placeholder=" Pesquisa" onKeyDown={handleKeyDown}/>
           </div>
         </div>
       </nav>

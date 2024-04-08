@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import ContactApp from './ContactApp';
 import Game from './pages/Game';
+import SearchGame from './pages/SearchGame';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<ContactApp />} />
           <Route path="game/:id" element={<Game />}></Route>
+          <Route path="search" element={<SearchGame />}></Route>
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
