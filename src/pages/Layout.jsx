@@ -9,6 +9,7 @@ const Layout = () => {
     if (e.key === 'Enter') {
       const inputBar = e.target;
       navigate(`/search?q=${inputBar.value}`);
+      navigate(0);
       inputBar.value = "";
     }
   };
